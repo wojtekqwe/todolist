@@ -7,32 +7,29 @@ import { Task } from './task';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  title = 'Lista zadań';
   taskName = '';
   config: { [key: string]: string } | null = null;
   tasks: Task[] = [
     {
-      name: 'Siatkówka',
+      name: 'Zrobienie zakupów',
       done: false,
     },
     {
-      name: 'Sprzątanie',
+      name: 'Sprzątanie pokoju',
       done: false,
     },
     {
       name: 'Mycie samochodu',
       done: false,
     },
+    {
+      name: 'Nauka',
+      done: false,
+    },
   ];
 
-  constructor() {
-    setTimeout(() => {
-      this.config = {
-        title: 'Lista zadań',
-        footer: 'Lista zadań zbudowana w Angularze',
-        date: new Date().toDateString(),
-      };
-    }, 500);
-  }
+  constructor() {}
 
   clearTasks() {
     this.tasks = [];
